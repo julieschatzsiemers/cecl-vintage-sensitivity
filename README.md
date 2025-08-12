@@ -43,6 +43,16 @@ Builds **vintage loss curves** (cumulative net loss % by months-on-book) and a *
 - [Vintage summary (12/24/36/60M & final) — CSV](results/vintage_summary.csv)  
   *Note: loss % values are fractions (e.g., 0.0213 = 2.13%).*
 
+## How to interpret
+
+- **Vintage Curves:** Each line = an origination quarter (vintage). Y-axis is cumulative **net** loss as a % of original balance. Check the 12/24/36-month points for early-tenor loss slope; steeper = higher risk.
+- **CECL Allowance Sensitivity:** Bars show reserve as % of amortized cost under Baseline/Adverse/Severe scenarios using PD × LGD × EAD.
+- **Vintage Summary (CSV):** Loss % values are **fractions** (e.g., `0.0213` = **2.13%**).
+  
+### Assumptions (demo)
+- PD mapped by grade (A–G), LGD = 85%, EAD = 65% of origination.
+- Swap in your own PD/LGD/EAD models and macro overlays when using real data.
+
 ## Quickstart
 ```bash
 python3 -m venv .venv
