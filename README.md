@@ -1,0 +1,47 @@
+# CECL Vintage Loss & Allowance Sensitivity (Python)
+
+Builds **vintage loss curves** (cumulative net loss % by months-on-book) and a **CECL-lite allowance sensitivity** (Baseline/Adverse/Severe) on a consumer-loan sample (loans_sample.csv).
+
+## Quickstart
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python src/compute_vintages_and_cecl.py
+cd ~/Projects/cecl-vintage-sensitivity
+source .venv/bin/activate
+
+# List the generated files
+ls -lh figures
+ls -lh results
+
+# Open the folders in Finder (so you can see the PNGs/CSVs)
+open figures
+open results
+
+# Peek a CSV right in Terminal (optional):
+head -n 5 results/vintage_summary.csv
+### 3) Stage everything (now that .gitignore exists)
+```bash
+git add -A
+git status
+
+### 3) Stage everything (now that .gitignore exists)
+```bash
+git add -A
+git status
+cat > README.md << 'MD'
+# CECL Vintage Loss & Allowance Sensitivity (Python)
+
+Builds **vintage loss curves** (cumulative net loss % by months-on-book) and a **CECL-lite allowance sensitivity** (Baseline/Adverse/Severe) on a consumer-loan sample (loans_sample.csv).
+
+## Quickstart
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python src/compute_vintages_and_cecl.py
+### 3) Stage everything (now that .gitignore exists)
+```bash
+git add -A
+git status
