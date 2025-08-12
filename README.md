@@ -53,6 +53,24 @@ Builds **vintage loss curves** (cumulative net loss % by months-on-book) and a *
 - PD mapped by grade (A–G), LGD = 85%, EAD = 65% of origination.
 - Swap in your own PD/LGD/EAD models and macro overlays when using real data.
 
+> **What this shows (in one line):** Vintage loss curves (cum. net loss % by months-on-book) and a CECL-lite reserve sensitivity using PD×LGD×EAD.
+
+## Key Outputs
+
+![Vintage Curves](figures/vintage_curves.png)
+![CECL Allowance Sensitivity](figures/cecl_sensitivity.png)
+
+- **Vintage summary (12/24/36/60M & final):** [`results/vintage_summary.csv`](results/vintage_summary.csv)  
+  *Loss % values are fractions (e.g., `0.0213` = **2.13%**).*
+
+## Run with real data
+```bash
+# Put your raw file at:
+#   data/loans.csv   (ignored by git)
+source .venv/bin/activate
+python src/make_sample.py                # builds data/loans_sample.csv
+python src/compute_vintages_and_cecl.py  # writes figures/ and results/
+
 ## Quickstart
 ```bash
 python3 -m venv .venv
