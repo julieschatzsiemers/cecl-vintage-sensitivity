@@ -35,6 +35,14 @@ cat > README.md << 'MD'
 
 Builds **vintage loss curves** (cumulative net loss % by months-on-book) and a **CECL-lite allowance sensitivity** (Baseline/Adverse/Severe) on a consumer-loan sample (loans_sample.csv).
 
+## Key Outputs
+
+![Vintage Curves](figures/vintage_curves.png)
+![CECL Allowance Sensitivity](figures/cecl_sensitivity.png)
+
+- [Vintage summary (12/24/36/60M & final) — CSV](results/vintage_summary.csv)  
+  *Note: loss % values are fractions (e.g., 0.0213 = 2.13%).*
+
 ## Quickstart
 ```bash
 python3 -m venv .venv
