@@ -2,6 +2,10 @@
 
 Builds **vintage loss curves** (cumulative net loss % by months-on-book) and a **CECL-lite allowance sensitivity** (Baseline/Adverse/Severe) on a consumer-loan sample (loans_sample.csv).
 
+cd ~/Projects/cecl-vintage-sensitivity
+printf "MIT License\n\nCopyright (c) 2025 Julie Schatz-Siemers\n" > LICENSE
+git add LICENSE && git commit -m "Add MIT license" && git push
+
 ## Quickstart
 ```bash
 python3 -m venv .venv
